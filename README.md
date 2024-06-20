@@ -21,45 +21,46 @@
 - **Following:**
 --  Follow and unfollow other users.
 - **Real-time Notifications:**
---  Receive notifications for likes, comments, and follows.
+--Receive notifications for likes, comments, and follows.
 
 ## Tech Stack
-- **Frontend:**
--- HTML, CSS, JavaScript, React
-- **Backend:**
---  Node.js, Express.js
-- **Database:**
---  MongoDB
-- **Authentication:**
---  JWT (JSON Web Tokens)
+**Frontend:**
+- HTML, CSS, JavaScript, React
+ **Backend:**
+-  Node.js, Express.js
+ **Database:**
+-  MongoDB
+ **Authentication:**
+-  JWT (JSON Web Tokens)
+  
 ## Installation
 1. Follow the steps:
-```git clone https://github.com/yourusername/social-media-website.git```
-```cd social-media-website```
-```cd backend```
-```npm i```
-```cd ../frontend```
-```npm i```
-```MONGO_URI=your_mongodb_uri```
-```JWT_SECRET=your_jwt_secret```
-```cd frontend```
-```npm run dev```
-```cd backend```
-```node index.js```
+```git clone https://github.com/yourusername/social-media-website.git
+   cd social-media-website
+   cd backend
+   npm i
+   cd ../frontend
+   npm i
+   MONGO_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+   cd frontend
+   npm run dev
+   cd backend
+   node index.js```
 2. Access the application using the localhost
 
 ## Usage
-- **Sign Up:**
---  Create a new account by providing a username, email, and password.
-- **Log In:**
---  Access your account by entering your email and password.
-- **Create Posts:**
---  Share updates by creating new posts from your profile.
-- **Follow Users:**
---  Follow other users to see their posts in your feed.
-- **Like and Comment:**
---  Engage with posts by liking and commenting.
-- **Edit Profile:**
---  Update your profile information, including your profile picture.
+**Sign Up:**
+-  Create a new account by providing a username, email, and password.
+**Log In:**
+-  Access your account by entering your email and password.
+ **Create Posts:**
+-  Share updates by creating new posts from your profile.
+ **Follow Users:**
+-  Follow other users to see their posts in your feed.
+ **Like and Comment:**
+-  Engage with posts by liking and commenting.
+ **Edit Profile:**
+-  Update your profile information, including your profile picture.
 
 
