@@ -10,16 +10,22 @@
 ## Features
  **User Authentication:**
 - Sign up, log in, log out, and password reset.
+  
  **User Profiles:**
 - View and edit user profiles.
+  
  **Posts:**
 - Create, edit, delete, and view posts.
+  
  **Likes:**
 - Like and unlike posts.
+
  **Comments:**
 -  Add, edit, delete, and view comments on posts.
+
  **Following:**
 -  Follow and unfollow other users.
+
  **Real-time Notifications:**
 -Receive notifications for likes, comments, and follows.
 
