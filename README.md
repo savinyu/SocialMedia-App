@@ -27,16 +27,19 @@
 -  Follow and unfollow other users.
 
  **Real-time Notifications:**
--Receive notifications for likes, comments, and follows.
+- Receive notifications for likes, comments, and follows.
 
 ## Tech Stack
 **Frontend:**
 - HTML, CSS, JavaScript, React
- **Backend:**
+  
+**Backend:**
 -  Node.js, Express.js
- **Database:**
+
+**Database:**
 -  MongoDB
- **Authentication:**
+
+**Authentication:**
 -  JWT (JSON Web Tokens)
   
 ## Installation
@@ -60,15 +63,20 @@
 ## Usage
 **Sign Up:**
 -  Create a new account by providing a username, email, and password.
+  
 **Log In:**
 -  Access your account by entering your email and password.
- **Create Posts:**
+
+**Create Posts:**
 -  Share updates by creating new posts from your profile.
- **Follow Users:**
+
+**Follow Users:**
 -  Follow other users to see their posts in your feed.
- **Like and Comment:**
+
+**Like and Comment:**
 -  Engage with posts by liking and commenting.
- **Edit Profile:**
+
+**Edit Profile:**
 -  Update your profile information, including your profile picture.
 
 
