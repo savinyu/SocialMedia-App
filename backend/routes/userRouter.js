@@ -105,20 +105,34 @@ const updateBody = zod.object({
     lastName: zod.string().optional()
 });
 
-router.put('/',authMiddleware,async (req,res)=>{
-    const payload = req.body;
-    const {success} = updateBody.safeParse(payload);
-    if(!success){
-        return res.status(411).json({
-            mssg: "Invalid Inputs"
-        });
+
+router.get("/:id", authMiddleware, async (req, res) => {
+    try {
+      const { id } = req.params;
+      const user = await Users.findById(id);
+      res.status(200).json(user);
+    } catch (err) {
+      res.status(404).json({ message: err.message });
     }
-    await Users.updateOne(payload,{
-        _id: req.userId
-    })
-    res.json({
-        mssg: "Updated successfully"
-    });
+});
+
+router.get("/:id/friends", authMiddleware, async (req, res) => {
+    try {
+      const { id } = req.params;
+      const user = await Users.findById(id);
+  
+      const friends = await Promise.all(
+        user.friends.map((id) => Users.findById(id))
+      );
+      const formattedFriends = friends.map(
+        ({ _id, firstName, lastName, occupation, location, picturePath }) => {
+          return { _id, firstName, lastName, occupation, location, picturePath };
+        }
+      );
+      res.status(200).json(formattedFriends);
+    } catch (err) {
+      res.status(404).json({ message: err.message });
+    }
 });
 
 module.exports = router;
