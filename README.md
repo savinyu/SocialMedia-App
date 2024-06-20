@@ -45,8 +45,8 @@
 ## Installation
 1. Follow the steps:
 ```
-   git clone https://github.com/yourusername/social-media-website.git
-   cd social-media-website
+   git clone https://github.com/savinyu/SocialMedia-App.git
+   cd SocialMedia-App
    cd backend
    npm i
    cd ../frontend
