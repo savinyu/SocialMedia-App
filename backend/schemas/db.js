@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.connect(MONGO_URL);
+mongoose.connect(process.env.MONGODB_URL);
 
 const userSchema = new mongoose.Schema({
     firstName: {
@@ -28,10 +28,10 @@ const userSchema = new mongoose.Schema({
         type: Array,
         default: [],
       },
-      location: String,
-      occupation: String,
-      viewedProfile: Number,
-      impressions: Number,
+      // location: String,
+      // occupation: String,
+      // viewedProfile: Number,
+      // impressions: Number,
     },
     { timestamps: true 
 });

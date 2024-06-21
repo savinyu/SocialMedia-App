@@ -16,6 +16,7 @@ const signupBody = zod.object({
 });
 
 router.post('/signup',async (req,res)=>{ 
+    try{
     const credentials = req.body;
     const {success} = signupBody.safeParse(credentials);
 
@@ -42,8 +43,10 @@ router.post('/signup',async (req,res)=>{
             message: "User created successfully",
             token: "Bearer " + token
         }); 
+    }}
+    catch{
+        res.json({mssg: "Some error occured"});
     }
-    res.json({mssg: "Some error occured"});
 });
 
 const signinBody = zod.object({
