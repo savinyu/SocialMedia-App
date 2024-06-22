@@ -11,9 +11,7 @@ router.get('/profile',authMiddleware,async (req,res)=>{
         userId : req.userId
     });
     
-    res.json({
-        balance : user.balance
-    })
+    res.status(201).json({user});
 });
 
 

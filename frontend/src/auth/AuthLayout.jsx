@@ -10,9 +10,6 @@ const AuthLayout = () => {
           <section className="flex flex-1 justify-center items-centre flex-col">
             <Outlet/>
           </section>
-          <img 
-            src="/images/logo.png" 
-            alt="logo" />
         </>
         }
     </div>

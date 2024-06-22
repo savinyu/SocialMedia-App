@@ -15,10 +15,7 @@ function App() {
             <Route element={<AuthLayout/>}>
                 <Route path='/signin' element={<Signin/>}/>
                 <Route path='/signup' element={<Signup/>}/>
-            </Route>
-            {/* Private Routes  */}
-            <Route element={<RootLayout/>}>
-                <Route index element={<Home/>}/>
+                <Route path='/' element={<Home/>}/>
             </Route>
         </Routes>
     </main>
