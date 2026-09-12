@@ -143,13 +143,13 @@ Some areas that could be improved in future versions:
 
 ### ⚙️ Running Locally
 1. Clone the repository
- ```text
+ ```bash
 git clone https://github.com/savinyu/SocialMedia-App.git
 cd SocialMedia-App
 ```
 3. Install dependencies
 Install dependencies for both the frontend and backend.
-```text
+```bash
 cd frontend
 npm install
 cd ../backend
@@ -159,7 +159,7 @@ npm install
 Create the required .env files for the backend and configure the database connection and JWT settings.
 5. Start the application
 Start the backend:
-```text
+```bash
 npm run dev
 Then start the frontend:
 npm start
