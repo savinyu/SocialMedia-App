@@ -1,82 +1,167 @@
-﻿# SocialMedia-App
- Welcome to the Social Media Website project! This repository contains the code for a fully functional social media website where users can create profiles, post updates, follow other users, and engage with posts through likes and comments.
+# 📱 Social Media App
 
-## Table of Contents
-- Features
-- Tech Stack
-- Installation
-- Usage
+A full-stack social media application built with **React, Node.js, Express, and MongoDB**.
 
-## Features
- **User Authentication:**
-- Sign up, log in, log out, and password reset.
-  
- **User Profiles:**
-- View and edit user profiles.
-  
- **Posts:**
-- Create, edit, delete, and view posts.
-  
- **Likes:**
-- Like and unlike posts.
+The project provides core social networking functionality including user authentication, profiles, posts, comments, likes, following, and notifications.
 
- **Comments:**
--  Add, edit, delete, and view comments on posts.
+---
 
- **Following:**
--  Follow and unfollow other users.
+## 🚀 Features
 
- **Real-time Notifications:**
-- Receive notifications for likes, comments, and follows.
+### 🔐 Authentication
 
-## Tech Stack
-**Frontend:**
-- HTML, CSS, JavaScript, React
-  
-**Backend:**
--  Node.js, Express.js
+- User registration and login
+- JWT-based authentication
+- Secure password handling
+- Password reset functionality
+- Protected routes
 
-**Database:**
--  MongoDB
+### 👤 User Profiles
 
-**Authentication:**
--  JWT (JSON Web Tokens)
-  
-## Installation
-1. Follow the steps:
+- View user profiles
+- Follow / unfollow users
+- Manage profile information
+- View user posts
+
+### 📝 Posts
+
+- Create posts
+- Edit posts
+- Delete posts
+- View posts from users
+- Like and unlike posts
+
+### 💬 Comments
+
+- Add comments to posts
+- View comments
+- Manage comments
+
+### 🔔 Notifications
+
+- Real-time user notifications
+- Notifications for social interactions
+
+---
+
+## 🏗️ Architecture
+
+The application is divided into separate frontend and backend applications.
+
+```text
+                    ┌─────────────────────┐
+                    │    React Frontend   │
+                    │                     │
+                    │     UI / State      │
+                    └──────────┬──────────┘
+                               │
+                         HTTP / REST API
+                               │
+                    ┌──────────▼──────────┐
+                    │   Express Backend   │
+                    │                     │
+                    │ Authentication      │
+                    │ Business Logic      │
+                    │ API Endpoints       │
+                    └──────────┬──────────┘
+                               │
+                            Mongoose
+                               │
+                    ┌──────────▼──────────┐
+                    │      MongoDB        │
+                    │                     │
+                    │ Users               │
+                    │ Posts               │
+                    │ Comments            │
+                    │ Relationships       │
+                    └─────────────────────┘
+
 ```
-   git clone https://github.com/savinyu/SocialMedia-App.git
-   cd SocialMedia-App
-   cd backend
-   npm i
-   cd ../frontend
-   npm i
-   MONGO_URI=your_mongodb_uri
-   JWT_SECRET=your_jwt_secret
-   cd frontend
-   npm run dev
-   cd backend
-   node index.js
+## 🛠️ Tech Stack
+### Frontend
+- React
+- JavaScript
+- HTML
+- CSS
+### Backend
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+### Database
+- MongoDB
+- Mongoose
+### Development Tools
+- Git
+- Postman
+## 🔑 Authentication Flow
+The application uses JWT-based authentication.
+```text
+User
+ │
+ │ Login / Register
+ ▼
+React Frontend
+ │
+ │ API Request
+ ▼
+Express Backend
+ │
+ │ Validate credentials
+ ▼
+MongoDB
+ │
+ │ User verified
+ ▼
+JWT Token
+ │
+ ▼
+Authenticated Requests
 ```
-2. Access the application using the localhost
+Protected API endpoints require a valid authentication token.
 
-## Usage
-**Sign Up:**
--  Create a new account by providing a username, email, and password.
-  
-**Log In:**
--  Access your account by entering your email and password.
+## 🧠 What I Learned
+Building this project helped me understand how different parts of a full-stack application work together.
+### Key areas I worked with:
+- Designing REST APIs
+- Connecting a React frontend with a backend
+- JWT-based authentication
+- MongoDB data modeling
+- User relationships such as followers/following
+- Protected API routes
+- CRUD operations
+- Managing frontend and backend responsibilities
+- Handling interactions between multiple users
+### 🔮 Future Improvements
+Some areas that could be improved in future versions:
+- Improved real-time notification architecture
+- Image and media optimization
+- Pagination and infinite scrolling
+- Better API validation
+- Automated unit and integration tests
+- Rate limiting and additional security measures
+- Improved deployment and monitoring
 
-**Create Posts:**
--  Share updates by creating new posts from your profile.
-
-**Follow Users:**
--  Follow other users to see their posts in your feed.
-
-**Like and Comment:**
--  Engage with posts by liking and commenting.
-
-**Edit Profile:**
--  Update your profile information, including your profile picture.
-
-
+### ⚙️ Running Locally
+1. Clone the repository
+ ```text
+git clone https://github.com/savinyu/SocialMedia-App.git
+cd SocialMedia-App
+```
+3. Install dependencies
+Install dependencies for both the frontend and backend.
+```text
+cd frontend
+npm install
+cd ../backend
+npm install
+```
+4. Configure environment variables.\
+Create the required .env files for the backend and configure the database connection and JWT settings.
+5. Start the application
+Start the backend:
+```text
+npm run dev
+Then start the frontend:
+npm start
+```
