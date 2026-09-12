@@ -39,7 +39,6 @@ The project provides core social networking functionality including user authent
 
 ### 🔔 Notifications
 
-- Real-time user notifications
 - Notifications for social interactions
 
 ---
@@ -134,7 +133,7 @@ Building this project helped me understand how different parts of a full-stack a
 - Handling interactions between multiple users
 ### 🔮 Future Improvements
 Some areas that could be improved in future versions:
-- Improved real-time notification architecture
+- Real-time notification architecture
 - Image and media optimization
 - Pagination and infinite scrolling
 - Better API validation
